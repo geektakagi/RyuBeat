@@ -9,21 +9,24 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,
 	game = new RyuBeat;
 
 	ChangeWindowMode(true);
-	
+	SetGraphMode(gameNS::WINDOW_W, gameNS::WINDOW_H, 32);
+
+	if (DxLib_Init() == -1 || SetDrawScreen(DX_SCREEN_BACK) != 0)
+		return false;
 
 	try{
 		game->initialize();
-		int done = 0;
-		while (!done)
+
+		while (!ProcessMessage())
 		{	// run the game loop
-			if (!game->run())	done = 1;
+			game->run();
 		}
 
-		// game->deleteAll();
+		DxLib_End();
 	}
 	catch (...)
 	{
-		// game->deleteAll();
+		DxLib_End();
 	}
 
 	

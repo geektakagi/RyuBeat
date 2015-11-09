@@ -28,7 +28,8 @@ void Game::renderGame()
 
 	// stop rendering
 	// graphics->endScene();
-	DrawCircle(0, 0, 25, -1);
+
+	DrawCircle(gameNS::WINDOW_W / 2, gameNS::WINDOW_H / 2, (gameNS::WINDOW_H + gameNS::WINDOW_W) / 8, -1);
 
 	ScreenFlip();
 }
