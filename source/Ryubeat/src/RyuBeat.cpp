@@ -1,4 +1,4 @@
-#include "RyuBeat.h"
+#include "..\include\RyuBeat.h"
 using namespace ryubeatNS;
 
 RyuBeat::RyuBeat()

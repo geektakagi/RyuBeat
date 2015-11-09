@@ -8,8 +8,8 @@ namespace gameNS
 {
 	const char FONT[] = "Courier New";  // font
 	const int POINT_SIZE = 14;          // point size
-	const int WINDOW_H;					// Window Height
-	const int WINDOW_W;					// Window Width
+	const int WINDOW_H = 960;					// Window Height
+	const int WINDOW_W = 1280;					// Window Width
 }
 
 class Game
@@ -27,9 +27,6 @@ public:
 
 	// Call run repeatedly by the main message loop in WinMain
 	virtual bool run();
-
-	// Delete all reserved memory.
-	virtual void deleteAll();
 
 	// Render game items.
 	virtual void renderGame();

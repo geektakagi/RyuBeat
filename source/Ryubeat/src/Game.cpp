@@ -1,4 +1,4 @@
-#include "game.h"
+#include "..\include\game.h"
 
 Game::Game()
 {
@@ -68,5 +68,7 @@ bool Game::run()
 	// if Esc key, exit game
 	if (CheckHitKey(KEY_INPUT_ESCAPE) == 1)
 		return false;
+
+	return true;
 
 }
